@@ -2,7 +2,7 @@ import os
 
 
 def limpar():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    os.system("cls" if os.name == "nt" else "clear")
 
 
 limpar()
@@ -18,7 +18,9 @@ while True:
             print("O valor em milhas deve ser maior que zero!")
             continue
 
-        taxa_de_embarque = float(input("Por fim, me diga a taxa de embarque com as milhas: "))
+        taxa_de_embarque = float(
+            input("Por fim, me diga a taxa de embarque com as milhas: ")
+        )
         break
     except ValueError:
         limpar()
@@ -30,10 +32,14 @@ calculo = (calculo / valor_em_milhas) * 1000
 print(f"\nRealizando o cálculo, o valor de cada milha está R${calculo:.2f}")
 
 if calculo <= 20:
-    print(f"Por esse valor de R${calculo:.2f} está valendo muito a pena usar as milhas!")
+    print(
+        f"Por esse valor de R${calculo:.2f} está valendo muito a pena usar as milhas!"
+    )
 elif calculo > 20 and calculo < 25:
     print(f"Por esse valor de R${calculo:.2f} está aceitável.")
 elif calculo >= 25 and calculo < 30:
-    print(f"Por esse valor de R${calculo:.2f} está bom, porém podia melhorar a situação. Recomendo usar o dinheiro.")
+    print(
+        f"Por esse valor de R${calculo:.2f} está bom, porém podia melhorar a situação. Recomendo usar o dinheiro."
+    )
 else:
     print(f"Por esse valor de R${calculo:.2f}, opte por usar dinheiro!")
